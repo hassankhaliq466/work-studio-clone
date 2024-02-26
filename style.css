@@ -1,0 +1,405 @@
+@font-face {
+    font-family: 'neu';
+    src: url('/Freight_Big_Pro/Freight\ Big\ Pro\ Light.otf');
+}
+
+@font-face {
+    font-family: 'neu2';
+    src: url('/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayLight.ttf');
+}
+
+@font-face {
+    font-family: 'neu3';
+    src: url('/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayLight.ttf');
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+.main{
+    background-color: black;
+}
+
+.intro{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 9;
+}
+
+.intro .yellow{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #F5E41B;
+    z-index: 8;
+}
+.intro .yellow2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #F5E41B;
+    z-index: 7;
+}
+
+.intro video{
+    position: absolute;
+    z-index: 6;
+    top: 0;
+}
+
+.intro h1{
+    font-size: 7vw;
+    font-weight: 300;
+    font-family: 'neu';
+    line-height: 4.9vw;
+    text-align: center;
+    letter-spacing: -0.2vw;
+    z-index: 9;
+    margin-top: 2.5vw;
+}
+
+.page1{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #F5E41B;
+    padding-bottom: 2vw;
+}
+
+.nav{
+    width: 100%;
+    height: 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3vw;
+    color:black;
+    padding-right: 0vw;
+}
+
+.nav svg path{
+    fill: black;
+}
+
+.nav .sections{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: 'neu2';
+    font-weight: 100;
+    padding: 2vw 3vw;
+    color: black;
+    position: relative;
+}
+
+
+.nav .sections h3{
+    font-size: 1.1vw;
+    color: black;
+    font-weight: 500;
+}
+
+.nav .sections h3 a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav .sections .gap{
+    width: 3vw;
+    height: 1vw;
+    z-index: 10;
+}
+
+.nav .sections .project_btn{
+    padding-right: 2vw;
+}
+
+
+.nav .sections span{
+    width: 4%;
+    height: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.sections span i{
+    font-size: 2.5vw;
+    color: black;
+    font-weight: 100;
+    font-family: 'neu2';
+}
+
+.page1 h1{
+    font-size: 7vw;
+    font-weight: 300;
+    font-family: 'neu';
+    line-height: 4.9vw;
+    text-align: center;
+    letter-spacing: -0.2vw;
+}
+
+.page1 video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.page1 .footer{
+    display: flex;
+    width: 100%;
+    height: 1.5vw;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3vw;
+    font-size: 1.2vw;
+    font-family: 'neu2';
+}
+
+.page1 .footer span{
+    font-size: 1.2vw;
+    font-family: 'neu2';
+    cursor: pointer;
+}
+
+.page1 .footer span i{
+    font-size: 2.6vw;
+    font-weight: 100;
+}
+
+.page2{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.page2 .elem{
+    width: 100%;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+.page2 .elem h1{
+    font-size: 7vw;
+    font-weight: 300;
+    font-family: 'neu';
+    line-height: 4.9vw;
+    text-align: center;
+    letter-spacing: -0.2vw;
+    display: inline-block;
+    z-index: 10;
+    background-color: transparent;
+    padding: 0 2.6vw;
+    overflow: hidden;
+}
+.page2 .elem .moving{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    white-space: nowrap;
+    z-index: 8;
+    background-color: #F5E41B;
+    color: black;
+    transform: translate(0,-80%) scaleY(0);
+    transition: all ease 0.3s;
+    height: 2vw;
+    align-items: center;
+}
+
+
+
+
+.page2 .elem .moving .moving-text{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: moving;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.page2 .elem .moving .moving-text h5{
+    display: inline-block;
+    font-size: 1.2vw;
+    text-transform: uppercase;
+    font-family: 'neu2';
+    font-weight: 600;
+    margin-right: 2vw;
+    transition: all ease 0.3s;
+    transition-delay: 0.5s;
+    opacity: 0;
+}
+
+
+.page2 .elem:hover .moving{
+    transform: translate(0,-80%) scaleY(1);
+}
+.page2 .elem:hover .moving .moving-text h5{
+    opacity: 1;
+}
+.page2 .elem:hover h1{
+    font-style: italic;
+    color: black;
+}
+
+@keyframes moving {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.page3{
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    margin-bottom: 3vw;
+}
+
+.img-con{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2vw 1vw;
+    gap: 2vw;
+    justify-content: center;
+    padding-top: 6vw;
+}
+
+.row1{
+    width: 31%;
+}
+
+.row2{
+    width: 31%;
+}
+
+.row3{
+    width: 31%;
+
+}
+.img-div{
+    margin-bottom: 1vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all ease 0.5s;
+}
+.img-div .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2.8vw;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+
+.overlay p{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    line-height: 2.6vw;
+    font-family: 'neu';
+}
+
+
+.img-div:hover img{
+    scale: 1.1;
+}
+
+.img-div:hover .overlay{
+    opacity: 1;
+    z-index: 8;
+}
+
+.page3 .back_to_top_btn{
+    width: 100%;
+    padding: 0.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2vw;
+    font-weight: 500;
+    font-family: 'neu2';
+    cursor: pointer;   
+    position: absolute;
+    bottom: -1.5vw;
+}
+
+.page3 .back_to_top_btn span i{
+    font-size: 2vw;
+}
+
+
+.main .main-footer{
+    width: 100%;
+    padding: 3vw 2vw;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+    font-size: 1vw;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'neu2';
+    position: absolute;
+    bottom: 0;
+}
+.main .main-footer .more{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
